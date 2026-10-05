@@ -2,7 +2,6 @@
   const user = wajibLogin();
   if (!user) return;
 
-  // Sapaan berdasarkan jam lokal perangkat
   function sapaan(jam: number): string {
     if (jam >= 4 && jam < 11) return "Selamat Pagi";
     if (jam >= 11 && jam < 15) return "Selamat Siang";

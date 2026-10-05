@@ -1,5 +1,5 @@
 "use strict";
-// Ambil elemen berdasarkan id; error jelas jika id tidak ada di HTML
+// elemen berdasarkan id; error jelas jika id tidak ada di HTML
 function ambilEl(id) {
     const el = document.getElementById(id);
     if (!el) {

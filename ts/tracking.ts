@@ -84,7 +84,6 @@
     cariDO();
   });
 
-  // Dukung tautan langsung, contoh: tracking.html?do=2023001234
   const doDariUrl = new URLSearchParams(window.location.search).get("do");
   if (doDariUrl) {
     inputDO.value = doDariUrl;
