@@ -1,8 +1,7 @@
 "use strict";
-// Fungsi bersama: sesi login, proteksi halaman, dan logout.
+// sesi login, proteksi halaman, dan logout.
 const SESSION_KEY = "sittaUser";
 function simpanSesi(user) {
-    // Password tidak ikut disimpan ke sesi
     const dataSesi = {
         id: user.id,
         nama: user.nama,

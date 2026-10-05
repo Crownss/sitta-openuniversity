@@ -1,6 +1,6 @@
 "use strict";
 (() => {
-    // Jika sudah login, langsung ke dashboard
+    // redirect ke dashboard
     if (ambilSesi()) {
         window.location.href = "dashboard.html";
     }
@@ -18,7 +18,6 @@
             tampilkanError("Email dan password wajib diisi.");
             return;
         }
-        // Cek ke dataPengguna di ts/data.ts
         const user = dataPengguna.find((p) => p.email.toLowerCase() === email && p.password === password);
         if (!user) {
             tampilkanError("Email atau password yang Anda masukkan salah.");

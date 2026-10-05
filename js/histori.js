@@ -3,7 +3,6 @@
     wajibLogin();
     const tabelHistori = ambilEl("tabelHistori");
     const inputCariHistori = ambilEl("cariHistori");
-    // Urutkan dari tanggal kirim terbaru
     const transaksi = Object.keys(dataTracking)
         .map((nomor) => ({ nomor: nomor, data: dataTracking[nomor] }))
         .sort((a, b) => b.data.tanggalKirim.localeCompare(a.data.tanggalKirim));

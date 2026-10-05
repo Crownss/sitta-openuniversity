@@ -1,5 +1,4 @@
 "use strict";
-// elemen berdasarkan id; error jelas jika id tidak ada di HTML
 function ambilEl(id) {
     const el = document.getElementById(id);
     if (!el) {
@@ -7,13 +6,11 @@ function ambilEl(id) {
     }
     return el;
 }
-// Mencegah teks data disisipkan sebagai HTML
 function escapeHtml(teks) {
     const div = document.createElement("div");
     div.textContent = teks == null ? "" : String(teks);
     return div.innerHTML;
 }
-// Kategori stok dipakai di halaman Informasi Bahan Ajar dan Rekap
 function kategoriStok(stok) {
     if (stok >= 300)
         return { label: "Aman", kelas: "badge-success" };
@@ -47,7 +44,6 @@ footerLogin();
 function angka(n) {
     return n.toLocaleString("id-ID");
 }
-// bahan ajar berdasarkan fungsi kunci, hitung judul & total stok
 function kelompokkan(fnKunci) {
     const hasil = {};
     dataBahanAjar.forEach((item) => {
@@ -69,7 +65,6 @@ const KELAS_STATUS = {
     Menipis: "badge-warning",
     Kritis: "badge-danger",
 };
-// cadangan jika file gambar tidak ditemukan
 const COVER_DEFAULT = "assets/logo_sitta.svg";
 const LABEL_TAHAP = ["", "Dikirim", "Dalam Perjalanan", "Selesai"];
 const KELAS_TAHAP = ["", "badge-info", "badge-warning", "badge-success"];
