@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <section class="card greeting-card">
+        <img
+          src="assets/logo_ut.webp"
+          alt="Logo Universitas Terbuka"
+          class="greeting-logo"
+        />
+        <div>
+          <h2 id="greeting">Selamat Datang</h2>
+          <p class="clock" id="clock"></p>
+          <p class="user-info" id="userInfo"></p>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="card stat-card">
+          <p class="label">Jenis Bahan Ajar</p>
+          <p class="value" id="totalJudul">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Total Stok</p>
+          <p class="value" id="totalStok">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Pengiriman Tercatat</p>
+          <p class="value" id="totalDO">0</p>
+        </div>
+      </section>
+
+      <h3 class="section-title">Menu Utama</h3>
+      <section class="menu-grid">
+        <a href="stok.html" class="card menu-card">
+          <div class="icon">&#128218;</div>
+          <h3>Informasi Bahan Ajar</h3>
+          <p>Lihat ketersediaan stok bahan ajar di setiap lokasi.</p>
+        </a>
+        <a href="tracking.html" class="card menu-card">
+          <div class="icon">&#128666;</div>
+          <h3>Tracking Pengiriman</h3>
+          <p>Lacak status pengiriman bahan ajar berdasarkan nomor DO.</p>
+        </a>
+        <a href="monitoring.html" class="card menu-card">
+          <div class="icon">&#128200;</div>
+          <h3>Monitoring Progress DO</h3>
+          <p>Laporan progres seluruh Delivery Order bahan ajar.</p>
+        </a>
+        <a href="rekap.html" class="card menu-card">
+          <div class="icon">&#128203;</div>
+          <h3>Rekap Bahan Ajar</h3>
+          <p>Laporan ringkasan stok per jenis dan status.</p>
+        </a>
+        <a href="histori.html" class="card menu-card">
+          <div class="icon">&#128339;</div>
+          <h3>Histori Transaksi</h3>
+          <p>Riwayat transaksi pengiriman bahan ajar.</p>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

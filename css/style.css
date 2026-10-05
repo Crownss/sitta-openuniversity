@@ -1,0 +1,630 @@
+/* ===== Variabel warna ===== */
+:root {
+  --primary: #1e3a8a;
+  --primary-light: #2563eb;
+  --accent: #facc15;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+/* ===== Komponen umum ===== */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--primary-light);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--primary-light);
+}
+
+.alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  display: none;
+}
+
+.alert.show {
+  display: block;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success { background: #dcfce7; color: var(--success); }
+.badge-warning { background: #fef3c7; color: var(--warning); }
+.badge-danger  { background: #fee2e2; color: var(--danger); }
+.badge-info    { background: #dbeafe; color: var(--primary-light); }
+
+/* ===== Halaman Login ===== */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-header img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+}
+
+.login-header h1 {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.login-header p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.navbar .brand img {
+  width: 36px;
+  height: 36px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links > li > a,
+.dropdown-toggle {
+  display: block;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active,
+.dropdown-toggle:hover,
+.dropdown-toggle.active,
+.dropdown.open .dropdown-toggle {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-links > li > a.active,
+.dropdown-toggle.active {
+  color: var(--accent);
+}
+
+/* Dropdown Laporan */
+.dropdown {
+  position: relative;
+}
+
+.caret {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 260px;
+  list-style: none;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 6px;
+  z-index: 10;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg);
+}
+
+.dropdown-menu a.active {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* Tombol hamburger, hanya tampil di layar kecil */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ===== Layout konten ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ===== Dashboard ===== */
+.greeting-card {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.greeting-logo {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.greeting-card h2 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.greeting-card .clock {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.greeting-card .user-info {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card .label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stat-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.menu-card {
+  display: block;
+  color: var(--text);
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}
+
+.menu-card .icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.menu-card h3 {
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.menu-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== Tracking ===== */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search-bar .input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.result {
+  margin-top: 24px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.detail-grid .label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.detail-grid .value {
+  font-weight: 600;
+}
+
+.timeline {
+  list-style: none;
+  border-left: 3px solid var(--border);
+  margin-left: 8px;
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 20px 20px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 3px solid #fff;
+}
+
+.timeline li:last-child::before {
+  background: var(--primary-light);
+}
+
+.timeline .time {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+}
+
+/* ===== Stok (tabel) ===== */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.toolbar .input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.toolbar select.input {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: #f8fafc;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+td.num {
+  text-align: right;
+  font-weight: 600;
+}
+
+.cover {
+  display: block;
+  width: 64px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--border);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+  transition: transform 0.2s;
+}
+
+.cover:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Laporan ===== */
+.section-title {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.progress {
+  width: 140px;
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary-light);
+  border-radius: 999px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 24px 16px;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 960px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar.open .nav-links {
+    display: flex;
+  }
+
+  .nav-links .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 4px;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu a.active {
+    color: #fff;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links .btn-outline {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .greeting-card h2 {
+    font-size: 22px;
+  }
+
+  .greeting-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .greeting-logo {
+    width: 72px;
+    height: 72px;
+  }
+}

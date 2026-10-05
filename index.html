@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="login-page">
+    <div class="card login-card">
+      <div class="login-header">
+        <img src="assets/logo_ut.webp" alt="Logo UT" />
+        <h1>Universitas Terbuka</h1>
+        <p>Sistem Informasi Tiras dan Transaksi Bahan Ajar</p>
+      </div>
+
+      <div id="loginAlert" class="alert alert-error"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="input"
+            placeholder="nama@ut.ac.id"
+            autocomplete="username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="input"
+            placeholder="Masukkan password"
+            autocomplete="current-password"
+          />
+        </div>
+        <button type="submit" class="btn btn-block">Masuk</button>
+      </form>
+
+      <p class="login-footer" id="footer"></p>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

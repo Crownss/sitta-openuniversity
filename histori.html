@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histori Transaksi - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <h1 class="page-title">Histori Transaksi Bahan Ajar</h1>
+      <p class="page-subtitle">Riwayat transaksi pengiriman bahan ajar.</p>
+
+      <section class="card">
+        <div class="toolbar">
+          <input
+            type="text"
+            id="cariHistori"
+            class="input"
+            placeholder="Cari nomor DO / nama / ekspedisi..."
+          />
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Tgl Kirim</th>
+                <th>Nomor DO</th>
+                <th>Nama</th>
+                <th>Kode Paket</th>
+                <th>Ekspedisi</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabelHistori"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/histori.js"></script>
+  </body>
+</html>

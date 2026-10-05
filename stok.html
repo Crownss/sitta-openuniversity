@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informasi Bahan Ajar - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <h1 class="page-title">Informasi Bahan Ajar</h1>
+      <p class="page-subtitle">
+        Daftar ketersediaan stok bahan ajar di setiap lokasi.
+      </p>
+
+      <section class="card">
+        <div class="toolbar">
+          <input
+            type="text"
+            id="cariStok"
+            class="input"
+            placeholder="Cari kode / nama bahan ajar / lokasi..."
+          />
+          <select id="urutStok" class="input">
+            <option value="">Urutkan</option>
+            <option value="stok-desc">Stok terbanyak</option>
+            <option value="stok-asc">Stok tersedikit</option>
+            <option value="nama-asc">Nama A-Z</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Cover</th>
+                <th>Kode Lokasi</th>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+                <th>Jenis</th>
+                <th>Edisi</th>
+                <th>Stok</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabelStok"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/stok.js"></script>
+  </body>
+</html>

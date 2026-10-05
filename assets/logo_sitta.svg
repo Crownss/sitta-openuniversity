@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#1e3a8a"/>
+  <path d="M14 20l18-8 18 8-18 8z" fill="#facc15"/>
+  <path d="M20 26v10c0 4 6 8 12 8s12-4 12-8V26l-12 5z" fill="#ffffff"/>
+  <path d="M50 20v14" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="50" cy="36" r="2.5" fill="#facc15"/>
+  <text x="32" y="58" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SITTA</text>
+</svg>

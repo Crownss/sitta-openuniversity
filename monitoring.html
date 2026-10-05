@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Progress DO - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <h1 class="page-title">Monitoring Progress DO Bahan Ajar</h1>
+      <p class="page-subtitle">
+        Laporan progres seluruh Delivery Order (DO) bahan ajar.
+      </p>
+
+      <section class="stats">
+        <div class="card stat-card">
+          <p class="label">Total DO</p>
+          <p class="value" id="jmlTotal">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Dikirim</p>
+          <p class="value" id="jmlDikirim">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Dalam Perjalanan</p>
+          <p class="value" id="jmlPerjalanan">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Selesai</p>
+          <p class="value" id="jmlSelesai">0</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nomor DO</th>
+                <th>Penerima</th>
+                <th>Ekspedisi</th>
+                <th>Tgl Kirim</th>
+                <th>Progress</th>
+                <th>Posisi Terakhir</th>
+              </tr>
+            </thead>
+            <tbody id="tabelMonitoring"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/monitoring.js"></script>
+  </body>
+</html>

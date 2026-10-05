@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekap Bahan Ajar - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <h1 class="page-title">Rekap Bahan Ajar</h1>
+      <p class="page-subtitle">
+        Ringkasan stok bahan ajar per jenis dan per status.
+      </p>
+
+      <section class="stats">
+        <div class="card stat-card">
+          <p class="label">Jumlah Judul</p>
+          <p class="value" id="rekapJudul">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Total Stok</p>
+          <p class="value" id="rekapStok">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Rata-rata Stok / Judul</p>
+          <p class="value" id="rekapRata">0</p>
+        </div>
+        <div class="card stat-card">
+          <p class="label">Jumlah Lokasi</p>
+          <p class="value" id="rekapLokasi">0</p>
+        </div>
+      </section>
+
+      <div class="report-grid">
+        <section class="card">
+          <h3 class="section-title">Rekap per Jenis</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jenis</th>
+                  <th>Judul</th>
+                  <th>Total Stok</th>
+                </tr>
+              </thead>
+              <tbody id="tabelJenis"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3 class="section-title">Rekap per Status Stok</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Judul</th>
+                  <th>Total Stok</th>
+                </tr>
+              </thead>
+              <tbody id="tabelStatus"></tbody>
+            </table>
+          </div>
+          <p class="hint">
+            Aman &ge; 300, Menipis 200&ndash;299, Kritis &lt; 200.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/rekap.js"></script>
+  </body>
+</html>

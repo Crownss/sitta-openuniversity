@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking - SITTA</title>
+    <link rel="icon" href="assets/logo_ut.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main class="container">
+      <h1 class="page-title">Tracking Pengiriman</h1>
+      <p class="page-subtitle">
+        Masukkan nomor Delivery Order (DO) untuk melihat status pengiriman bahan
+        ajar.
+      </p>
+
+      <section class="card">
+        <form id="trackingForm" class="search-bar">
+          <input
+            type="text"
+            id="nomorDO"
+            class="input"
+            placeholder="Contoh: 2023001234"
+            inputmode="numeric"
+          />
+          <button type="submit" class="btn">Cari</button>
+        </form>
+        <p class="hint" id="daftarDO"></p>
+      </section>
+
+      <section id="hasilTracking" class="result"></section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/tracking.js"></script>
+  </body>
+</html>
